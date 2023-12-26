@@ -1,0 +1,83 @@
+.like-container2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .like-container2 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    transition: 100ms;
+    margin-left: 10px;
+  }
+  
+  .checkmark2 {
+    top: 0;
+    left: 0;
+    height: 1em;
+    width: 1em;
+    transition: 100ms;
+    animation: dislike_effect 400ms ease;
+  }
+  
+  .like-container2 input:checked ~ .checkmark2 path {
+    fill: #FF5353;
+    stroke-width: 0;
+  }
+  
+  .like-container2 input:checked ~ .checkmark2 {
+    animation: like_effect 400ms ease;
+  }
+  
+  .like-container2:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes like_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes dislike_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+/**/
+
+.like-list{
+  width: 600px;
+}
+
+.search-result-item{
+  /* margin: 5px auto; */
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .likeHeader{
+    font-size: 18px;
+  }
+}

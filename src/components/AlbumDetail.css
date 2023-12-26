@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'MyMediumFont';
+    src: url('./Medium.otf') format('opentype');
+  }
+  
+  *{
+      box-sizing: border-box;
+  }
+
+  .resultContainer{
+    /* width: 250px; */
+    overflow-x: hidden;
+  }
+
+.like-container5 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .like-container5 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    transition: 100ms;
+    margin-left: 10px;
+  }
+  
+  .checkmark5 {
+    top: 0;
+    left: 0;
+    height: 1em;
+    width: 1em;
+    transition: 100ms;
+    animation: dislike_effect 400ms ease;
+  }
+  
+  .like-container5 input:checked ~ .checkmark5 path {
+    fill: #FF5353;
+    stroke-width: 0;
+  }
+  
+  .like-container5 input:checked ~ .checkmark5 {
+    animation: like_effect 400ms ease;
+  }
+  
+  .like-container5:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes like_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes dislike_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+   .album-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .album-oneP,
+  .album-twoP {
+    width: 48%;
+  }
+  
+  .album-twoP{
+  margin-left: 50%;
+  position: absolute;
+  top: 10%;
+  }
+
+  /* .artist-imgAlb{
+    border-radius: 50%;
+    margin-left: 25%;
+  } */
+
+  .album-oneP{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+
+  }
+
+  .album-ttlArt{
+    font-family: 'MyMediumFont';
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none !important;
+  }
+  
+  
+  .album-ttlArt:hover{
+    color: #c6c4c4;
+    text-decoration: underline !important;
+  }
+
+  .s-Li2{
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+
+  .album-ttlM{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 40px;
+    /* margin-bottom: 0;  */
+  }
+
+  .alb-artB{
+    /* margin-top: 0px; */
+  }
+
+
+  .music-in-alb{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    align-items: start;
+    /* width: 550px; */
+  }
+
+.image-art-div{
+  background-color: #c6c4c4;
+  border-radius: 50%;
+    margin-left: 25%;
+    width: 350px;
+    height: 350px;
+}
+
+.artist-boxAlb{
+  margin-top: 0;
+}
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .audio-m {
+    width: calc(100% - 500px); 
+    /* margin-left: -130%; */
+
+      }
+
+      .music-in-alb{
+        /* display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-around;
+        align-items: start;
+        width: 650px; */
+        /* margin-left: -130%; */
+      }
+
+      .album-twoP{
+        margin-left: 50%;    
+        top: 20%;
+        left: 5%;
+        width: 250px !important;
+        }
+
+        .resultContainer{
+
+        }
+
+        .album-twoP{
+          width: 250px;
+          overflow-x: hidden;
+          left: 7%;
+        }
+
+        .alb-box{
+            width: 200px;
+            padding-right: 10px !important;
+        }
+        .resultBox{
+
+        }
+
+        .album-resultB{
+          width: 180px;
+          margin-left: 34% ;
+        }
+
+        .like-container5{
+          margin-left: -100%;
+        }
+
+        .trackName{
+        overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         text-align: start;
+         width: 80px;
+        }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .album-main{
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .music-in-alb{
+    /* display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    align-items: start;
+    width: 650px; */
+    /* margin-left: -130%; */
+  }
+
+  .audio-m {
+    width: calc(100% - 500px); 
+      }
+
+  .album-oneP{
+    display: none;
+    margin-top: 10%;
+
+  }
+
+  .resultContainer{
+
+    /* padding-right: 100% !important; */
+    /* padding-left:-100% !important; */
+    /* right: -100%; */
+  }
+
+  .album-twoP{
+    width: 250px !important;
+    overflow-x: hidden;
+    height: 500px;
+    top: 25%;
+    left: -40%;
+
+  }
+  
+  .resultBox{
+
+  }
+
+  .alb-box{
+    font-size: 18px;
+    width: 200px;
+    padding-left: 0;
+    height: auto;
+  }
+
+  
+  .album-resultB{
+    width: 200px;
+    margin-left: 32% ;
+  }
+
+  .trackName{
+    overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     text-align: start;
+     width: 80px;
+    }
+
+    .like-container5{
+      margin-left: -100%;
+    }
+
+}
+
+@media screen and (min-width: 991px) and (max-width: 1250px) {
+  .resultContainer{
+
+    /* padding-right: 100% !important; */
+    /* padding-left:-100% !important; */
+    /* right: -100%; */
+  }
+
+  .album-twoP{
+    /* width: 250px; */
+    overflow-x: hidden;
+    height: 500px;
+    top: 20%;
+    left: 0%;
+  }
+}

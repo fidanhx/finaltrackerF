@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'MyMediumFont';
+    src: url('./Medium.otf') format('opentype');
+  }
+  
+  *{
+      box-sizing: border-box;
+  }
+  
+  .like-main{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .like-list-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom:100px ;
+  }
+    .like-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* padding-left: 250px; */
+      margin-top:1%;
+      border-radius: 20px;
+      border: 1px solid rgb(66, 60, 60);
+      overflow-y: auto; 
+      overflow-x: hidden; 
+      max-height: 70vh;
+      max-height: 70vh;
+      position: fixed;
+      background-color: #191a1a;
+      /* padding-right: 250px; */
+      /* border-radius: 10px; */
+      width: 500px; 
+    }
+    
+    .track-info {
+     color: #eee;
+    }
+    
+    .likeHeader{
+      color: #eee;
+      font-family: 'MyMediumFont';
+      text-align: center;
+    }
+  
+    .no-track{
+      font-size: 18px;
+      text-align: center;
+      line-height: 60px;
+      height: 60px;
+      color: #eee;
+      font-style: italic;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  
+  .like-list::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  .like-list::-webkit-scrollbar-track {
+    background: #191a1a; 
+  }
+  
+  .like-list::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 20px;
+  }
+  
+  .like-list::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  
+  .like-container3 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .like-container3 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    transition: 100ms;
+    margin-left: 10px;
+  }
+  
+  .checkmark3 {
+    top: 0;
+    left: 0;
+    height: 1em;
+    width: 1em;
+    transition: 100ms;
+    animation: dislike_effect 400ms ease;
+  }
+  
+  .like-container3 input:checked ~ .checkmark3 path {
+    fill: #FF5353;
+    stroke-width: 0;
+  }
+  
+  .like-container3 input:checked ~ .checkmark3 {
+    animation: like_effect 400ms ease;
+  }
+  
+  .like-container3:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes like_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes dislike_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  

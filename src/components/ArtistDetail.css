@@ -1,0 +1,69 @@
+.all-artDtl{
+    display: flex;   
+  align-items: center; 
+}
+
+.artist-box {
+margin-right: 20px; 
+}
+
+.one-artistDtl{
+display: flex;
+flex-direction: column;
+}
+
+.artist-imgDtl{
+border-radius: 50%;
+width: 450px;
+}
+
+.artist-boxDtl{
+padding: 10px;
+width: calc(100% - 230px);
+text-align: left;
+background-color: #eee;
+border-radius: 50%;
+width: 600px;
+}
+
+.trackAlbum, .artistFan {
+margin-bottom: 5px;
+margin-left: 100px;
+margin-top: 10px;
+font-size: 22px;
+font-style: italic;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
+
+.artist-nm2{
+color: #eee;
+font-size: 16px;
+font-family: 'MyMediumFont';
+margin-left: 100px;
+margin-bottom: 100px;
+}
+
+.artist-nm2:hover{
+color: #c6c4c4;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+.trackAlbum, .artistFan{
+  font-size: 12px;
+  margin-left: 30px;
+}
+.trackAlbum{
+  margin-top: -10px;
+}
+
+.artist-nm2{
+  font-size: 12px;
+  margin-left: 0;
+  margin-top: 50px;
+}
+.all-artDtl{
+  display: flex;
+  flex-direction: column;
+}
+
+}
